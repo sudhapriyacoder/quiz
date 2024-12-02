@@ -5,9 +5,9 @@ const cors = require('cors');
 const app = express();
 require('dotenv').config();
 app.use(cors({
-    origin: 'https://client-quiz-app.onrender.com',  // Allow requests from your local frontend
+    origin: '*',  // Allow requests from your local frontend
     methods: 'GET,POST,PUT,DELETE',  // Allow specific HTTP methods
-    credentials: true  // If you're using cookies or authentication
+    credentials: false  // If you're using cookies or authentication
   }));
 app.use(express.json());
 const dbconfig = require('./config/dbconfig');
